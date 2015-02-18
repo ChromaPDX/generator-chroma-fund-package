@@ -20,22 +20,36 @@ module.exports = yeoman.generators.Base.extend({
       name: 'name',
       message: 'Name?'
     },{
-        name: 'blurb',
-        message: 'Burb?'
-    },{
-        name: 'threshold',
-        message: 'Threshold?'
-    },{
         name: 'url',
-        message: 'Url?'
+        message: 'Url'
+    },{
+        name: 'offering_price',
+        message: 'Offering Price'
+    },{
+        name: 'percentage_offered',
+        message: 'Percentage offered'
+    },
+    {
+        name: 'threshold',
+        message: 'Threshold'
+    },
+    {
+        name: 'return_cap',
+        message: 'Return CAP'
+    },{
+      name: 'admin_email',
+      message: 'Admin email'
     }];
 
     this.prompt(prompts, function (props) {
 
         this.name = props.name;
-        this.blurb = props.blurb;
-        this.threshold = props.threshold;
         this.url = props.url;
+        this.offering_price = props.offering_price;
+        this.percentage_offered = props.percentage_offered;
+        this.threshold = props.threshold;
+        this.return_cap = props.return_cap;
+        this.admin_email = props.admin_email;
 
         done();
     }.bind(this));

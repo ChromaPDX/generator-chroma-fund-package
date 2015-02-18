@@ -15,9 +15,12 @@ Package.onUse(function(api) {
   api.addFiles('<%=name%>.js');
 
   api.export('NAME');
-  api.export('BLURB');
-  api.export('DESCRIPTION');
+  api.export('URL');
+  api.export('ADMIN_EMAIL');
+  api.export('OFFERING_PRICE');
+  api.export('PERCENTAGE_OFFERED');
   api.export('THRESHOLD');
+  api.export('RETURN_CAP');
 });
 
 Package.onTest(function(api) {
